@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-gray-600">
+    <h1 class="place-self-center text-[50px] text-white">Expense Tracker</h1>
+    <h1 id="displayBudget" class="place-self-center text-[75px] text-white">00000</h1>
+    <div class="grid gap-5">
+      <button
+        id="updateBtn"
+        class="place-self-center bg-green-500 text-white rounded-xl w-[200px] h-[50px]"
+      >
+        Update Budget
+      </button>
+      <button
+        id="manageBtn"
+        class="place-self-center bg-blue-500 text-white rounded-xl w-[200px] h-[50px]"
+      >
+        Manage Expenses
+      </button>
+      <button
+        id="addBtn"
+        class="place-self-center bg-red-500 text-white rounded-xl w-[200px] h-[50px]"
+      >
+        Add Expenses
+      </button>
+
+      <div id="updatePopup" class="hidden fixed bg-gray-500 w-full">
+        <button id="closeUpdate" class="rounded bg-red-500 w-[50px] text-white flex justify-self-end indent-1 mr-1 mb-3 mt-1">Close</button>
+        <input id="updateBudget" class="bg-white rounded-sm indent-1 flex justify-self-center mb-3" type="text" placeholder="Update Budget">
+      </div>
+      <div id="managePopup" class="hidden fixed bg-gray-500 w-full">
+        <button id="closeManage" class="rounded bg-red-500 w-[50px] text-white flex justify-self-end indent-1 mr-1 mb-3 mt-1">Close</button>
+      </div>
+      <div id="addPopup" class="hidden fixed bg-gray-500 w-full">
+        <button id="closeAdd" class="rounded bg-red-500 w-[50px] text-white flex justify-self-end indent-1 mr-1 mb-3 mt-1">Close</button>
+        <div class="grid gap-3">
+            <input id="nameOfExpenseInput" class="bg-white rounded-sm indent-1" type="text" placeholder="Name of Expense">
+            <input id="amountOfExpenseInput" class="bg-white rounded-sm indent-1 mb-3" type="text" placeholder="Amount of Expense">
+        </div>
+        <div class="flex justify-end gap-2">
+
+            <button id="addExpenseBtn" class="rounded bg-green-500 p-1 text-white" >Add Expense</button>
+            <button id="cancelExpenseBtn" class="rounded bg-red-500 p-1 mr-1  text-white">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
